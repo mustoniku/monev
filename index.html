@@ -115,15 +115,15 @@
     <div class="card">
       <div class="logo" aria-hidden="true"></div>
       <h1>Aplikasi Monev BOS & TPG 2026</h1>
-      <p>Memuat aplikasi resmi Kementerian Agama Kabupaten Tegal.</p>
-      <div class="spinner" aria-hidden="true"></div>
+      <p>Mengalihkan ke aplikasi Kementerian Agama Kabupaten Tegal.</p>
+      <p><a id="openApp" href="https://script.google.com/macros/s/AKfycbzWoE3QKJ-yqIHepawdHcPBjpScYMqVpDKAzEOaZTv2vPRc2g3PAOohclYX_cSXSeBB/exec" style="display:inline-block;padding:12px 20px;border-radius:10px;background:#0f7a3b;color:white;text-decoration:none;font-weight:700">Buka aplikasi</a></p><p>Jika belum terbuka otomatis, tekan tombol di atas.</p>
       <div id="warning" class="warning" hidden>
         URL Apps Script belum diisi. Ganti GANTI_DENGAN_URL_WEB_APP_EXEC dengan URL Web App yang berakhiran /exec.
       </div>
     </div>
   </div>
 
-  <iframe id="appFrame" title="Aplikasi Monev BOS & TPG 2026" hidden></iframe>
+  
 
   <script>
     const TARGET_URL = 'https://script.google.com/macros/s/AKfycbzWoE3QKJ-yqIHepawdHcPBjpScYMqVpDKAzEOaZTv2vPRc2g3PAOohclYX_cSXSeBB/exec';
@@ -133,14 +133,12 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      const frame = document.getElementById('appFrame');
       const warning = document.getElementById('warning');
       if (!isValidTarget(TARGET_URL)) {
         warning.hidden = false;
         return;
       }
-      frame.src = TARGET_URL;
-      frame.hidden = false;
+      window.location.replace(TARGET_URL);
     });
   </script>
 </body>
