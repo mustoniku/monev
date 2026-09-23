@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Aplikasi Monev BOS & TPG 2026</title>
-  <link rel="icon" type="image/png" href="/logo-kemenag.png?v=4">
-  <link rel="apple-touch-icon" href="/logo-kemenag.png?v=4">
+  <link rel="icon" type="image/png" href="https://cms2023.kemenag.go.id/storage/files/shares/Logo/Kementerian_Agama_new_logo%20(2).png">
+  <link rel="apple-touch-icon" href="https://cms2023.kemenag.go.id/storage/files/shares/Logo/Kementerian_Agama_new_logo%20(2).png">
   <style>
     :root {
       --green: #0f7a3b;
@@ -15,7 +15,7 @@
       --ink: #142033;
       --muted: #66736d;
       --line: #d9e5dd;
-      --logo-url: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Seal_of_the_Ministry_of_Religious_Affairs_of_the_Republic_of_Indonesia.svg/250px-Seal_of_the_Ministry_of_Religious_Affairs_of_the_Republic_of_Indonesia.svg.png");
+      --logo-url: url("https://cms2023.kemenag.go.id/storage/files/shares/Logo/Kementerian_Agama_new_logo%20(2).png");
     }
 
     * { box-sizing: border-box; }
@@ -115,15 +115,15 @@
     <div class="card">
       <div class="logo" aria-hidden="true"></div>
       <h1>Aplikasi Monev BOS & TPG 2026</h1>
-      <p>Mengalihkan ke aplikasi Kementerian Agama Kabupaten Tegal.</p>
-      <p><a id="openApp" href="https://script.google.com/macros/s/AKfycbzWoE3QKJ-yqIHepawdHcPBjpScYMqVpDKAzEOaZTv2vPRc2g3PAOohclYX_cSXSeBB/exec" style="display:inline-block;padding:12px 20px;border-radius:10px;background:#0f7a3b;color:white;text-decoration:none;font-weight:700">Buka aplikasi</a></p><p>Jika belum terbuka otomatis, tekan tombol di atas.</p>
+      <p>Memuat aplikasi resmi Kementerian Agama Kabupaten Tegal.</p>
+      <div class="spinner" aria-hidden="true"></div>
       <div id="warning" class="warning" hidden>
         URL Apps Script belum diisi. Ganti GANTI_DENGAN_URL_WEB_APP_EXEC dengan URL Web App yang berakhiran /exec.
       </div>
     </div>
   </div>
 
-  
+  <iframe id="appFrame" title="Aplikasi Monev BOS & TPG 2026" hidden></iframe>
 
   <script>
     const TARGET_URL = 'https://script.google.com/macros/s/AKfycbzWoE3QKJ-yqIHepawdHcPBjpScYMqVpDKAzEOaZTv2vPRc2g3PAOohclYX_cSXSeBB/exec';
@@ -133,12 +133,14 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
+      const frame = document.getElementById('appFrame');
       const warning = document.getElementById('warning');
       if (!isValidTarget(TARGET_URL)) {
         warning.hidden = false;
         return;
       }
-      window.location.replace(TARGET_URL);
+      frame.src = TARGET_URL;
+      frame.hidden = false;
     });
   </script>
 </body>
