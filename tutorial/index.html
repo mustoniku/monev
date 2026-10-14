@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panduan Video | Monev BOS/BOP dan TPG 2026</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #15364b;
+      background: #eef6fa;
+      line-height: 1.6;
+    }
+    header {
+      padding: 40px 20px;
+      color: white;
+      text-align: center;
+      background: linear-gradient(120deg, #123047, #087f79);
+      border-bottom: 5px solid #e8ba45;
+    }
+    header p { margin: 8px 0 0; }
+    .label {
+      color: #ffe092;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+    h1 {
+      margin: 10px 0;
+      font-size: clamp(24px, 5vw, 36px);
+      line-height: 1.3;
+    }
+    main {
+      max-width: 1000px;
+      margin: 28px auto;
+      padding: 0 16px;
+    }
+    .card {
+      background: white;
+      padding: 24px;
+      border: 1px solid #d9e6ee;
+      border-radius: 20px;
+      box-shadow: 0 8px 28px #1230470d;
+    }
+    h2 { margin: 0 0 8px; font-size: 23px; }
+    .intro { margin: 0 0 20px; color: #52697b; }
+    .video {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #123047;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .fallback { font-size: 14px; }
+    a { color: #076e69; }
+    a:focus-visible {
+      outline: 3px solid #d69c24;
+      outline-offset: 4px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .step {
+      padding: 18px;
+      border-radius: 12px;
+      background: #eef7f5;
+    }
+    .step strong { display: block; margin-bottom: 6px; }
+    .step p { margin: 0; font-size: 14px; }
+    .action {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #e0eaf0;
+    }
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 12px;
+      background: #087f79;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .button:hover { background: #05665f; }
+    .action p { font-size: 14px; color: #52697b; }
+    footer {
+      text-align: center;
+      padding: 8px 16px 28px;
+      color: #52697b;
+      font-size: 13px;
+    }
+    @media (max-width: 640px) {
+      header { padding: 28px 16px; }
+      .card { padding: 16px; }
+      .steps { grid-template-columns: 1fr; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="label">PANDUAN PENGGUNAAN APLIKASI</div>
+    <h1>Monev BOS/BOP dan TPG Tahun 2026</h1>
+    <p>Pelajari langkahnya, siapkan dokumennya, lalu masuk ke aplikasi.</p>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="judul-video">
+      <h2 id="judul-video">Video Tutorial Guru Penerima TPG</h2>
+      <p class="intro">
+        Bapak/Ibu dapat menonton panduan ini sebelum login.
+        Jeda atau ulangi video sesuai kebutuhan.
+      </p>
+
+      <div class="video">
+        <iframe
+          src="https://drive.google.com/file/d/1aU5mxjj5ZkX7_TOQ-qilr0dtSnwVdFOD/preview"
+          title="Video tutorial penggunaan aplikasi Monev"
+          allow="autoplay; fullscreen"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p class="fallback">
+        Video belum tampil?
+        <a
+          href="https://drive.google.com/file/d/1aU5mxjj5ZkX7_TOQ-qilr0dtSnwVdFOD/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer">
+          Buka video di Google Drive ↗
+        </a>
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <strong>1. Tonton panduan</strong>
+          <p>Perhatikan tahapan penggunaan aplikasi dalam video.</p>
+        </div>
+        <div class="step">
+          <strong>2. Siapkan dokumen</strong>
+          <p>Siapkan berkas sesuai jenis monev dan checklist yang berlaku.</p>
+        </div>
+        <div class="step">
+          <strong>3. Masuk ke aplikasi</strong>
+          <p>Gunakan akun masing-masing untuk melanjutkan proses monev.</p>
+        </div>
+      </div>
+
+      <div class="action">
+        <a class="button" href="https://monev.penmategal.my.id/">
+          Sudah paham, masuk ke aplikasi →
+        </a>
+        <p>Pelaksanaan monev mengikuti jadwal dan informasi dari Penma.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Kantor Kementerian Agama Kabupaten Tegal · Monev 2026
+  </footer>
+</body>
+</html>
