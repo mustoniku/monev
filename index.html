@@ -1,28 +1,16 @@
 <!doctype html>
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Aplikasi Monev BOS &amp; TPG 2026</title>
 <link rel="icon" type="image/png" href="https://cms2023.kemenag.go.id/storage/files/shares/Logo/Kementerian_Agama_new_logo%20(2).png"><link rel="apple-touch-icon" href="https://cms2023.kemenag.go.id/storage/files/shares/Logo/Kementerian_Agama_new_logo%20(2).png">
-<style>html,body{margin:0;width:100%;height:100%;background:#123e50;font-family:Arial,sans-serif}iframe{display:block;width:100%;height:100%;height:100dvh;border:0;background:white}.notice{position:fixed;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:min(420px,80vw);padding:24px;border-radius:18px;background:white;color:#12304a;text-align:center;box-shadow:0 10px 50px #0003}.notice img{width:64px}.notice[hidden]{display:none}.notice button{padding:10px;border:0;border-radius:8px;background:#087e75;color:white;cursor:pointer}</style></head>
-<body><div class="notice" id="notice" hidden><img src="https://cms2023.kemenag.go.id/storage/files/shares/Logo/Kementerian_Agama_new_logo%20(2).png" alt="Logo Kemenag"><h2>Aplikasi Monev BOS &amp; TPG 2026</h2><p id="message">Memuat Berita Acara…</p><button type="button" id="dismiss">Tutup pemberitahuan</button></div>
-<style>
-.notice{inset:0;transform:none;width:auto;overflow:auto;display:grid;place-content:center;padding:24px;background:radial-gradient(ellipse at top left,#286a80,transparent 65%),linear-gradient(135deg,#102f49,#087e75);color:white;border-radius:0;box-shadow:none}.notice img{width:86px;margin:0 auto 18px}.notice h2{font-size:clamp(26px,5vw,36px);margin:10px 0}.notice p{max-width:560px;margin:16px auto;line-height:1.8;font-size:18px}.notice .coffee{padding:22px;border:1px solid #ffe18c55;border-radius:20px;background:#ffffff0d}.notice strong{color:#ffe18c}.notice .signature{font-size:14px;letter-spacing:1px;color:#c6e7ec}.spinner{width:48px;height:48px;margin:18px auto;border-radius:50%;background:conic-gradient(#ffd166,#ef709d,#9a8aff,#57c7ff,#47dfaf,#ffd166);mask:radial-gradient(farthest-side,transparent calc(100% - 5px),#000 0);animation:spin 1s linear infinite}.notice button{margin:auto;border:1px solid #ffffff55;background:transparent}.notice button[hidden]{display:none}@keyframes spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.spinner{animation-duration:3s}}
-</style>
+<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#123e50}iframe{display:block;width:100%;height:100%;height:100dvh;border:0}</style></head>
+<body>
 <iframe id="appFrame" title="Aplikasi Monev BOS &amp; TPG 2026" allow="fullscreen"></iframe>
 <script>
-const notice=document.getElementById('notice'),frame=document.getElementById('appFrame'),base='https://script.google.com/macros/s/AKfycbzWoE3QKJ-yqIHepawdHcPBjpScYMqVpDKAzEOaZTv2vPRc2g3PAOohclYX_cSXSeBB/exec',shareToken=new URLSearchParams(location.search).get('ba');
-document.getElementById('dismiss').onclick=()=>notice.hidden=true;
-notice.hidden=false;
-notice.querySelector('h2').textContent='Mohon menunggu...';
-document.getElementById('message').textContent='Aplikasi Monev BOS & TPG Tahun 2026 segera disiapkan.';
-document.getElementById('message').setAttribute('role','status');
-document.getElementById('dismiss').hidden=true;
-document.getElementById('message').insertAdjacentHTML('afterend','<div class="spinner" aria-hidden="true"></div><p class="coffee">☕<br>Nikmati secangkir kopi dulu sebagai wujud rasa syukur dan agar tetap <strong>SEMANGAT!!!...</strong></p><p class="signature">Tim Monev BOS &amp; TPG</p>');
-setTimeout(()=>{if(!notice.hidden)document.getElementById('dismiss').hidden=false;},20000);
-frame.addEventListener('load',()=>notice.hidden=true);
+const frame=document.getElementById('appFrame');
+const base='https://script.google.com/macros/s/AKfycbzWoE3QKJ-yqIHepawdHcPBjpScYMqVpDKAzEOaZTv2vPRc2g3PAOohclYX_cSXSeBB/exec';
+const shareToken=new URLSearchParams(location.search).get('ba');
 if(shareToken&&/^[0-9a-f-]{60,90}$/i.test(shareToken)){
   document.title='Berita Acara Hasil Monev';
-  notice.hidden=false;
   frame.src=base+'?ba='+encodeURIComponent(shareToken);
-  setTimeout(()=>{if(!notice.hidden)document.getElementById('message').textContent='Pemuatan membutuhkan waktu lebih lama. Pastikan koneksi tersedia dan versi Apps Script untuk domain tetap sudah diterapkan.';},15000);
 }else{
   frame.src=base;
 }
